@@ -187,7 +187,11 @@ function App() {
 
         <section className="grid gap-4 md:grid-cols-3">
           {stats.map((stat, index) => (
-            <article key={stat.label} className={`card animate-rise [animation-delay:${200 + index * 80}ms]`}>
+            <article
+              key={stat.label}
+              className="card animate-rise"
+              style={{ animationDelay: `${200 + index * 80}ms` }}
+            >
               <p className="text-xs uppercase tracking-[0.08em] text-slate-400">{stat.label}</p>
               <p className="mt-2 text-3xl font-semibold tracking-tight text-white">{stat.value}</p>
             </article>
