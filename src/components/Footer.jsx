@@ -1,17 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] py-8">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <span className="font-mono text-xs text-[#6e7681] tracking-widest uppercase">
-          AllocaIQ
-        </span>
-        <p className="font-mono text-[10px] text-[#6e7681] tracking-wide text-center">
-          For institutional use only. Not financial advice. Not a trading system.
-        </p>
-        <p className="font-mono text-[10px] text-[#6e7681]">
-          © {new Date().getFullYear()} AllocaIQ
-        </p>
+    <footer className="border-t border-slate-200 py-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-3 px-6 text-center sm:flex-row sm:text-left">
+        <span className="text-sm font-medium text-slate-800">AllocaIQ</span>
+        <p className="text-xs text-slate-500">For institutional use only. Not financial advice.</p>
+        <p className="text-xs text-slate-500">© {new Date().getFullYear()} AllocaIQ</p>
       </div>
     </footer>
-  );
+  )
 }

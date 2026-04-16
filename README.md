@@ -10,24 +10,21 @@ A production-ready, responsive SaaS landing page for AllocaIQ, an institutional 
 
 ## Design
 
-Dark institutional palette (Bloomberg Terminal × Stripe × Palantir aesthetic):
-- Background: `#080b0f`
-- Accents: `#58a6ff` (blue), `#3fb950` (green), `#f85149` (red), `#e3b341` (amber)
-- Typography: system sans-serif with monospace accents for metrics
-- 8px spacing system
+Light, minimal fintech aesthetic (Stripe / Ramp style):
+- Background: light neutral (`#f8fafc` + white surfaces)
+- Single accent color: indigo CTA (`#4f46e5`)
+- Typography-first centered hero with high whitespace
+- Subtle borders and soft shadows
 
 ## Sections
 
-1. **Navbar** — fixed top bar with nav links and CTA
-2. **Hero** — headline, subheadline, CTAs, live signal widget
-3. **Problem** — fragmented signal problem statement
-4. **Solution** — dual-layer architecture overview
-5. **Features** — 4 capability cards
-6. **How It Works** — 6-step signal pipeline flow
-7. **Signal Feed** — interactive table with expandable signal rationale
-8. **Trust** — institutional standards and stats
-9. **CTA** — final conversion section
-10. **Footer**
+1. **Navbar** — Product / Docs / Pricing / Login + Request Access CTA
+2. **Hero** — centered headline, subheadline, single primary CTA + sample link
+3. **Signal Preview** — clean output table (ETH / SOL / ARB)
+4. **Problem** — concise market fragmentation statement
+5. **Solution** — dual-layer architecture (Intelligence Layer + Risk Layer)
+6. **Features** — 3 focused cards
+7. **Footer**
 
 ## Getting Started
 
@@ -41,4 +38,3 @@ npm run dev
 ```bash
 npm run build
 ```
-

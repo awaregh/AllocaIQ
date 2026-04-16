@@ -1,91 +1,35 @@
 const features = [
   {
-    id: '01',
     title: 'AI Research Layer',
-    description:
-      'Transforms raw market, on-chain, and private data into structured investment signals with traceable reasoning chains.',
-    tags: ['LLM Reasoning', 'Signal Generation', 'Explainability'],
-    accent: '#58a6ff',
+    description: 'Transforms fragmented data into clear investment signal candidates with consistent reasoning output.',
   },
   {
-    id: '02',
-    title: 'Alpha Scoring Engine',
-    description:
-      'Multi-factor model that ranks opportunities across four dimensions: liquidity, smart money positioning, momentum, and volatility regime.',
-    tags: ['Liquidity', 'Smart Money', 'Momentum', 'Volatility'],
-    accent: '#bc8cff',
+    title: 'Risk Scoring Engine',
+    description: 'Applies deterministic scoring and constraints before any signal is surfaced to decision-makers.',
   },
   {
-    id: '03',
-    title: 'Risk Guardrails System',
-    description:
-      'Hard constraint enforcement at every stage. Volatility filters, concentration limits, liquidity thresholds, and anomaly detection.',
-    tags: ['Volatility Filters', 'Exposure Limits', 'Anomaly Detection'],
-    accent: '#3fb950',
-  },
-  {
-    id: '04',
     title: 'Smart Money Tracking',
-    description:
-      'Detects institutional wallet flows and capital movement patterns across on-chain and off-chain venues.',
-    tags: ['Wallet Flow Analysis', 'Capital Patterns', 'Institutional Flows'],
-    accent: '#e3b341',
+    description: 'Monitors institutional flow behavior and changing liquidity conditions across venues.',
   },
-];
+]
 
 export default function Features() {
   return (
-    <section id="features" className="relative py-24 border-b border-white/[0.06]">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-16">
-          <div className="font-mono text-[10px] text-[#58a6ff] tracking-widest uppercase mb-4">
-            Capabilities
-          </div>
-          <h2 className="text-3xl md:text-4xl font-semibold text-[#e6edf3] leading-tight tracking-tight max-w-xl">
-            Institutional-grade modules for every layer of the process.
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-0 border border-white/[0.06]">
-          {features.map((f, i) => (
-            <div
-              key={f.id}
-              className={`p-8 border-white/[0.06] hover:bg-white/[0.02] transition-colors group
-                ${i === 0 || i === 1 ? 'border-b' : ''}
-                ${i === 0 || i === 2 ? 'md:border-r' : ''}
-              `}
+    <section id="features" className="px-6 pb-20">
+      <div className="mx-auto w-full max-w-6xl">
+        <h2 className="text-2xl font-semibold tracking-tight text-slate-900 sm:text-3xl">Features</h2>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {features.map((feature) => (
+            <article
+              key={feature.title}
+              className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
             >
-              <div className="flex items-start justify-between mb-5">
-                <div
-                  className="w-9 h-9 border flex items-center justify-center shrink-0"
-                  style={{ borderColor: `${f.accent}30`, backgroundColor: `${f.accent}10` }}
-                >
-                  <span className="font-mono text-[10px]" style={{ color: f.accent }}>
-                    {f.id}
-                  </span>
-                </div>
-              </div>
-
-              <h3 className="font-semibold text-[#e6edf3] text-base tracking-tight mb-3">
-                {f.title}
-              </h3>
-              <p className="text-sm text-[#8b949e] leading-relaxed mb-5">{f.description}</p>
-
-              <div className="flex flex-wrap gap-2">
-                {f.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="font-mono text-[10px] px-2 py-0.5 border tracking-wide"
-                    style={{ borderColor: `${f.accent}20`, color: `${f.accent}` }}
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
+              <h3 className="text-base font-semibold text-slate-900">{feature.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-slate-600">{feature.description}</p>
+            </article>
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
