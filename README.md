@@ -38,3 +38,25 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Deploy to Vercel
+
+1. In Vercel, import the `awaregh/AllocaIQ` repository as a new project.
+2. Confirm project settings:
+   - Framework Preset: `Vite`
+   - Install Command: `npm install`
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
+3. Set the production branch (usually `main`) and deploy.
+4. After deploy, open the live URL and verify the page and static assets load correctly.
+5. Keep Git integration enabled so pushes trigger automatic deployments.
+
+### Optional: SPA rewrites for client-side routing
+
+If you add client-side routes later, use this rewrite rule in `vercel.json` so deep links resolve to `index.html`:
+
+```json
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
+```
